@@ -1,4 +1,4 @@
-package com.lapsa.validation;
+package tech.lapsa.javax.validation;
 
 import static java.lang.annotation.ElementType.*;
 import static java.lang.annotation.RetentionPolicy.*;
@@ -9,14 +9,14 @@ import java.lang.annotation.Target;
 import javax.validation.Constraint;
 import javax.validation.Payload;
 
-import com.lapsa.validation.constraints.ValidHumanNameConstraintValidator;
+import tech.lapsa.javax.validation.constraints.ValidHumanNameConstraintValidator;
 
 @Target({ METHOD, FIELD, ANNOTATION_TYPE, CONSTRUCTOR, PARAMETER })
 @Retention(RUNTIME)
 @Constraint(validatedBy = ValidHumanNameConstraintValidator.class)
 public @interface ValidHumanName {
 
-    String message() default "{com.lapsa.validation.ValidHumanName.message}";
+    String message() default "{tech.lapsa.javax.validation.ValidHumanName.message}";
 
     String[] languagesAllowed() default { "ru", "kk", "en" };
 

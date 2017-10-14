@@ -1,4 +1,4 @@
-package com.lapsa.validation;
+package tech.lapsa.javax.validation;
 
 import static java.lang.annotation.ElementType.*;
 import static java.lang.annotation.RetentionPolicy.*;
@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
 import javax.validation.Constraint;
 import javax.validation.Payload;
 
-import com.lapsa.validation.constraints.DaysBeforeNowConstraintValidator;
+import tech.lapsa.javax.validation.constraints.DaysBeforeNowConstraintValidator;
 
 @Target({ METHOD, FIELD, ANNOTATION_TYPE, CONSTRUCTOR, PARAMETER })
 @Retention(RUNTIME)
@@ -20,7 +20,7 @@ public @interface DaysBeforeNow {
 
     int value();
 
-    String message() default "{com.lapsa.validation.DaysBeforeNow.message}";
+    String message() default "{tech.lapsa.javax.validation.DaysBeforeNow.message}";
 
     Class<?>[] groups() default {};
 

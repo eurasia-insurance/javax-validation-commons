@@ -1,11 +1,11 @@
-package com.lapsa.validation.constraints;
+package tech.lapsa.javax.validation.constraints;
 
 import java.time.LocalDate;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-import com.lapsa.validation.NotTooOldYearOfIssue;
+import tech.lapsa.javax.validation.NotTooOldYearOfIssue;
 
 public class NotTooOldYearOfIssueConstraintValidator
 	implements ConstraintValidator<NotTooOldYearOfIssue, Integer> {

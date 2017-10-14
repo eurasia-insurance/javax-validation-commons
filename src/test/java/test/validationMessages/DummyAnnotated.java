@@ -1,18 +1,18 @@
 package test.validationMessages;
 
-import com.lapsa.validation.TemporalFuture;
-import com.lapsa.validation.TemporalLeftAfterRight;
-import com.lapsa.validation.TemporalLeftBeforeRight;
-import com.lapsa.validation.TemporalPast;
-import com.lapsa.validation.DaysAfterNow;
-import com.lapsa.validation.DaysBeforeNow;
-import com.lapsa.validation.NotEmptyString;
-import com.lapsa.validation.NotNullValue;
-import com.lapsa.validation.NotZeroAmount;
-import com.lapsa.validation.ValidDateOfBirth;
-import com.lapsa.validation.ValidDateOfIssue;
-import com.lapsa.validation.ValidHumanName;
-import com.lapsa.validation.ValidURI;
+import tech.lapsa.javax.validation.DaysAfterNow;
+import tech.lapsa.javax.validation.DaysBeforeNow;
+import tech.lapsa.javax.validation.NotEmptyString;
+import tech.lapsa.javax.validation.NotNullValue;
+import tech.lapsa.javax.validation.NotZeroAmount;
+import tech.lapsa.javax.validation.TemporalFuture;
+import tech.lapsa.javax.validation.TemporalLeftAfterRight;
+import tech.lapsa.javax.validation.TemporalLeftBeforeRight;
+import tech.lapsa.javax.validation.TemporalPast;
+import tech.lapsa.javax.validation.ValidDateOfBirth;
+import tech.lapsa.javax.validation.ValidDateOfIssue;
+import tech.lapsa.javax.validation.ValidHumanName;
+import tech.lapsa.javax.validation.ValidURI;
 
 public interface DummyAnnotated {
 

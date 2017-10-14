@@ -1,8 +1,8 @@
-package com.lapsa.validation.constraints;
+package tech.lapsa.javax.validation.constraints;
 
 import java.time.LocalDate;
 
-import com.lapsa.validation.ValidDateOfBirth;
+import tech.lapsa.javax.validation.ValidDateOfBirth;
 
 public class ValidDateOfBirthConstraintValidator extends ATemporalConstraintValidator<ValidDateOfBirth> {
 

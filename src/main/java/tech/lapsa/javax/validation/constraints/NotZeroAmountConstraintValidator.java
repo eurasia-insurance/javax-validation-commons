@@ -1,9 +1,9 @@
-package com.lapsa.validation.constraints;
+package tech.lapsa.javax.validation.constraints;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-import com.lapsa.validation.NotZeroAmount;
+import tech.lapsa.javax.validation.NotZeroAmount;
 
 public class NotZeroAmountConstraintValidator
 	implements ConstraintValidator<NotZeroAmount, Number> {

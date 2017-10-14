@@ -1,4 +1,4 @@
-package com.lapsa.validation;
+package tech.lapsa.javax.validation;
 
 import java.util.Calendar;
 

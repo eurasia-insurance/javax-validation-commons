@@ -1,9 +1,9 @@
-package com.lapsa.validation.constraints;
+package tech.lapsa.javax.validation.constraints;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-import com.lapsa.validation.TemporalLeftBeforeRight;
+import tech.lapsa.javax.validation.TemporalLeftBeforeRight;
 
 public class TemporalLeftAfterRightConstraintValidator extends ATemporalLeftRightConstraintValidator<TemporalLeftBeforeRight> {
 

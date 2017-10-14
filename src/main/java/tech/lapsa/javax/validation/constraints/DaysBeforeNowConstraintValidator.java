@@ -1,10 +1,10 @@
-package com.lapsa.validation.constraints;
+package tech.lapsa.javax.validation.constraints;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-import com.lapsa.validation.DaysBeforeNow;
-import com.lapsa.validation.Mode;
+import tech.lapsa.javax.validation.DaysBeforeNow;
+import tech.lapsa.javax.validation.Mode;
 
 public class DaysBeforeNowConstraintValidator extends ATemporalConstraintValidator<DaysBeforeNow> {
 

@@ -1,4 +1,4 @@
-package com.lapsa.validation.constraints;
+package tech.lapsa.javax.validation.constraints;
 
 import static com.lapsa.utils.TemporalUtils.*;
 

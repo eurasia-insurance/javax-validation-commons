@@ -1,4 +1,4 @@
-package com.lapsa.validation;
+package tech.lapsa.javax.validation;
 
 import static java.lang.annotation.ElementType.*;
 import static java.lang.annotation.RetentionPolicy.*;
@@ -9,13 +9,13 @@ import java.lang.annotation.Target;
 import javax.validation.Constraint;
 import javax.validation.Payload;
 
-import com.lapsa.validation.constraints.NotTooOldYearOfIssueConstraintValidator;
+import tech.lapsa.javax.validation.constraints.NotTooOldYearOfIssueConstraintValidator;
 
 @Target({ METHOD, FIELD, ANNOTATION_TYPE, CONSTRUCTOR, PARAMETER })
 @Retention(RUNTIME)
 @Constraint(validatedBy = NotTooOldYearOfIssueConstraintValidator.class)
 public @interface NotTooOldYearOfIssue {
-    String message() default "{com.lapsa.validation.NotTooOldYearOfIssue.message}";
+    String message() default "{tech.lapsa.javax.validation.NotTooOldYearOfIssue.message}";
 
     int maxAge() default 10;
 

@@ -1,4 +1,4 @@
-package com.lapsa.validation.constraints;
+package tech.lapsa.javax.validation.constraints;
 
 import static com.lapsa.utils.TemporalUtils.*;
 
@@ -9,11 +9,11 @@ import java.time.LocalDateTime;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-import com.lapsa.validation.CalendarComparison;
-import com.lapsa.validation.DateComparison;
-import com.lapsa.validation.LocalDateComparison;
-import com.lapsa.validation.LocalDateTimeComparison;
-import com.lapsa.validation.TemporalComparison;
+import tech.lapsa.javax.validation.CalendarComparison;
+import tech.lapsa.javax.validation.DateComparison;
+import tech.lapsa.javax.validation.LocalDateComparison;
+import tech.lapsa.javax.validation.LocalDateTimeComparison;
+import tech.lapsa.javax.validation.TemporalComparison;
 
 public abstract class ATemporalLeftRightConstraintValidator<A extends Annotation>
 	implements ConstraintValidator<A, TemporalComparison<?>> {

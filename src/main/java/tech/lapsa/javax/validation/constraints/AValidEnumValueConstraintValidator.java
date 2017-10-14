@@ -1,11 +1,11 @@
-package com.lapsa.validation.constraints;
+package tech.lapsa.javax.validation.constraints;
 
 import java.lang.annotation.Annotation;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-import com.lapsa.validation.ValidationMode;
+import tech.lapsa.javax.validation.ValidationMode;
 
 public abstract class AValidEnumValueConstraintValidator<A extends Annotation, T extends Enum<T>>
 	implements ConstraintValidator<A, T> {

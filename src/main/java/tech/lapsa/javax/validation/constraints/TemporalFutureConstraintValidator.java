@@ -1,10 +1,10 @@
-package com.lapsa.validation.constraints;
+package tech.lapsa.javax.validation.constraints;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
-import com.lapsa.validation.TemporalFuture;
+import tech.lapsa.javax.validation.TemporalFuture;
 
 public class TemporalFutureConstraintValidator extends ATemporalConstraintValidator<TemporalFuture> {
 

@@ -1,15 +1,15 @@
-com.lapsa.validation.TemporalFuture.message = Күні келешекте болуы тиіс
-com.lapsa.validation.TemporalLeftAfterRight.message = Күндерде хронология бұзылған. Бірінші күн екіншісінен бұрын болуы тиіс
-com.lapsa.validation.TemporalLeftBeforeRight.message = Күндерде хронология бұзылған. Бірінші күн екіншісінен кейін болуы тиіс
-com.lapsa.validation.TemporalPast.message = Күн өткен уақытта болуы тиіс
-com.lapsa.validation.DaysAfterNow.message = Тым ерте күн
-com.lapsa.validation.DaysBeforeNow.message = Тым кеш күн
-com.lapsa.validation.NotEmptyString.message = Міндетті алаң
-com.lapsa.validation.NotNullValue.message = Міндетті алаң
-com.lapsa.validation.ValidDateOfBirth.message = Туылған күні дұрыс емес
-com.lapsa.validation.ValidDateOfIssue.message = Берілген күні дұрыс емес
-com.lapsa.validation.NotTooYoungYearOfIssue.message = Ең аз рұқсат етілген жас {minAge}  жасты құрайды
-com.lapsa.validation.NotTooOldYearOfIssue.message = Ең көп рұқсат етілген жас {maxAge} жасты құрайды
-com.lapsa.validation.NotZeroAmount.message = Соманың мөлшері нөлден үлкен болуы тиіс
-com.lapsa.validation.ValidHumanName.message = Дұрыс емес мән. Сіз кіргізген мәнде рұқсат етілмеген символдар болуы мүмкін.
-com.lapsa.validation.ValidURI.message = =KAZ= Неверный URI
+tech.lapsa.javax.validation.TemporalFuture.message = Күні келешекте болуы тиіс
+tech.lapsa.javax.validation.TemporalLeftAfterRight.message = Күндерде хронология бұзылған. Бірінші күн екіншісінен бұрын болуы тиіс
+tech.lapsa.javax.validation.TemporalLeftBeforeRight.message = Күндерде хронология бұзылған. Бірінші күн екіншісінен кейін болуы тиіс
+tech.lapsa.javax.validation.TemporalPast.message = Күн өткен уақытта болуы тиіс
+tech.lapsa.javax.validation.DaysAfterNow.message = Тым ерте күн
+tech.lapsa.javax.validation.DaysBeforeNow.message = Тым кеш күн
+tech.lapsa.javax.validation.NotEmptyString.message = Міндетті алаң
+tech.lapsa.javax.validation.NotNullValue.message = Міндетті алаң
+tech.lapsa.javax.validation.ValidDateOfBirth.message = Туылған күні дұрыс емес
+tech.lapsa.javax.validation.ValidDateOfIssue.message = Берілген күні дұрыс емес
+tech.lapsa.javax.validation.NotTooYoungYearOfIssue.message = Ең аз рұқсат етілген жас {minAge}  жасты құрайды
+tech.lapsa.javax.validation.NotTooOldYearOfIssue.message = Ең көп рұқсат етілген жас {maxAge} жасты құрайды
+tech.lapsa.javax.validation.NotZeroAmount.message = Соманың мөлшері нөлден үлкен болуы тиіс
+tech.lapsa.javax.validation.ValidHumanName.message = Дұрыс емес мән. Сіз кіргізген мәнде рұқсат етілмеген символдар болуы мүмкін.
+tech.lapsa.javax.validation.ValidURI.message = =KAZ= Неверный URI

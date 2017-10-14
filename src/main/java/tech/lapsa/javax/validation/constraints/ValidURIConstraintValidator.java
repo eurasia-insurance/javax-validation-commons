@@ -1,4 +1,4 @@
-package com.lapsa.validation.constraints;
+package tech.lapsa.javax.validation.constraints;
 
 import java.net.URI;
 import java.util.stream.Stream;
@@ -6,7 +6,7 @@ import java.util.stream.Stream;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-import com.lapsa.validation.ValidURI;
+import tech.lapsa.javax.validation.ValidURI;
 
 public class ValidURIConstraintValidator implements ConstraintValidator<ValidURI, URI> {
 

@@ -1,8 +1,8 @@
-package com.lapsa.validation.constraints;
+package tech.lapsa.javax.validation.constraints;
 
 import java.time.LocalDate;
 
-import com.lapsa.validation.ValidDateOfIssue;
+import tech.lapsa.javax.validation.ValidDateOfIssue;
 
 public class ValidDateOfIssueConstraintValidator extends ATemporalConstraintValidator<ValidDateOfIssue> {
 

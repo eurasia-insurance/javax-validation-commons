@@ -1,9 +1,9 @@
-package com.lapsa.validation.constraints;
+package tech.lapsa.javax.validation.constraints;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-import com.lapsa.validation.NotNullValue;
+import tech.lapsa.javax.validation.NotNullValue;
 
 public class NotNullValueConstraintValidator implements ConstraintValidator<NotNullValue, Object> {
 

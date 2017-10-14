@@ -1,9 +1,9 @@
-package com.lapsa.validation.constraints;
+package tech.lapsa.javax.validation.constraints;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-import com.lapsa.validation.NotEmptyString;
+import tech.lapsa.javax.validation.NotEmptyString;
 
 public class NotEmptyStringConstraintValidator implements ConstraintValidator<NotEmptyString, String> {
 
