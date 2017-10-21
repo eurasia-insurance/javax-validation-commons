@@ -1,7 +1,10 @@
 package tech.lapsa.javax.validation.constraints;
 
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
+import java.util.Date;
 
 import tech.lapsa.javax.validation.DaysBeforeNow;
 import tech.lapsa.javax.validation.Mode;
@@ -18,6 +21,17 @@ public class DaysBeforeNowConstraintValidator extends ATemporalConstraintValidat
     }
 
     @Override
+    protected boolean validate(Date value) {
+	switch (mode) {
+	case MUST_NOT:
+	    return value.toInstant().isBefore(Instant.now().plus(days, ChronoUnit.DAYS));
+	case MUST:
+	default:
+	    return value.toInstant().isBefore(Instant.now().minus(days, ChronoUnit.DAYS));
+	}
+    }
+
+    @Override
     protected boolean validate(LocalDateTime value) {
 	switch (mode) {
 	case MUST_NOT:
@@ -25,6 +39,17 @@ public class DaysBeforeNowConstraintValidator extends ATemporalConstraintValidat
 	case MUST:
 	default:
 	    return value.isBefore(LocalDateTime.now().minusDays(days));
+	}
+    }
+
+    @Override
+    protected boolean validate(Instant value) {
+	switch (mode) {
+	case MUST_NOT:
+	    return value.isBefore(Instant.now().plus(days, ChronoUnit.DAYS));
+	case MUST:
+	default:
+	    return value.isBefore(Instant.now().minus(days, ChronoUnit.DAYS));
 	}
     }
 

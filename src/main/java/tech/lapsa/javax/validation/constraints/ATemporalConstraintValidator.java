@@ -1,12 +1,10 @@
 package tech.lapsa.javax.validation.constraints;
 
-import static com.lapsa.utils.TemporalUtils.*;
-
 import java.lang.annotation.Annotation;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.util.Calendar;
 import java.util.Date;
 
 import javax.validation.ConstraintValidator;
@@ -24,9 +22,9 @@ public abstract class ATemporalConstraintValidator<A extends Annotation> impleme
 	if (value == null)
 	    return true;
 	if (value instanceof Date)
-	    return validate(toLocalDateTime((Date) value));
-	if (value instanceof Calendar)
-	    return validate(toLocalDateTime((Calendar) value));
+	    return validate((Date) value);
+	if (value instanceof Instant)
+	    return validate((Instant) value);
 	if (value instanceof LocalTime)
 	    return validate((LocalTime) value);
 	if (value instanceof LocalDate)
@@ -36,8 +34,16 @@ public abstract class ATemporalConstraintValidator<A extends Annotation> impleme
 	throw unsupportedType(value.getClass());
     }
 
-    private static ValidationException unsupportedType(Class<?> clazz) {
+    protected static ValidationException unsupportedType(Class<?> clazz) {
 	return new ValidationException(String.format("%1$s isn't supported for this constraint", clazz));
+    }
+
+    protected boolean validate(Date value) {
+	throw unsupportedType(value.getClass());
+    }
+
+    protected boolean validate(Instant value) {
+	throw unsupportedType(value.getClass());
     }
 
     protected boolean validate(LocalDateTime value) {

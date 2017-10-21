@@ -1,7 +1,9 @@
 package tech.lapsa.javax.validation.constraints;
 
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 import tech.lapsa.javax.validation.TemporalLeftBeforeRight;
 
@@ -23,6 +25,20 @@ public class TemporalLeftAfterRightConstraintValidator extends ATemporalLeftRigh
 	if (left == null || right == null)
 	    return true;
 	return left.isAfter(right);
+    }
+
+    @Override
+    protected boolean compare(Instant left, Instant right) {
+	if (left == null || right == null)
+	    return true;
+	return left.isAfter(right);
+    }
+
+    @Override
+    protected boolean compare(Date left, Date right) {
+	if (left == null || right == null)
+	    return true;
+	return left.after(right);
     }
 
 }

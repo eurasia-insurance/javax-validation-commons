@@ -1,16 +1,17 @@
 package tech.lapsa.javax.validation.constraints;
 
-import static com.lapsa.utils.TemporalUtils.*;
-
 import java.lang.annotation.Annotation;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
+import javax.validation.ValidationException;
 
-import tech.lapsa.javax.validation.CalendarComparison;
 import tech.lapsa.javax.validation.DateComparison;
+import tech.lapsa.javax.validation.InstantComparison;
 import tech.lapsa.javax.validation.LocalDateComparison;
 import tech.lapsa.javax.validation.LocalDateTimeComparison;
 import tech.lapsa.javax.validation.TemporalComparison;
@@ -23,11 +24,11 @@ public abstract class ATemporalLeftRightConstraintValidator<A extends Annotation
 	if (value == null)
 	    return true;
 
-	if (value instanceof CalendarComparison)
-	    return compare((CalendarComparison) value);
-
 	if (value instanceof DateComparison)
 	    return compare((DateComparison) value);
+
+	if (value instanceof InstantComparison)
+	    return compare((InstantComparison) value);
 
 	if (value instanceof LocalDateComparison)
 	    return compare((LocalDateComparison) value);
@@ -42,19 +43,35 @@ public abstract class ATemporalLeftRightConstraintValidator<A extends Annotation
 	return compare(value.left(), value.right());
     }
 
+    private boolean compare(InstantComparison value) {
+	return compare(value.left(), value.right());
+    }
+
     private boolean compare(LocalDateComparison value) {
 	return compare(value.left(), value.right());
     }
 
     private boolean compare(DateComparison value) {
-	return compare(toLocalDateTime(value.left()), toLocalDateTime(value.right()));
+	return compare(value.left(), value.right());
     }
 
-    private boolean compare(CalendarComparison value) {
-	return compare(toLocalDateTime(value.left()), toLocalDateTime(value.right()));
+    protected static ValidationException unsupportedType(Class<?> clazz) {
+	return new ValidationException(String.format("%1$s isn't supported for this constraint", clazz));
     }
 
-    protected abstract boolean compare(LocalDateTime left, LocalDateTime right);
+    protected boolean compare(Date left, Date right) {
+	throw unsupportedType(left.getClass());
+    }
 
-    protected abstract boolean compare(LocalDate left, LocalDate right);
+    protected boolean compare(Instant left, Instant right) {
+	throw unsupportedType(left.getClass());
+    }
+
+    protected boolean compare(LocalDateTime left, LocalDateTime right) {
+	throw unsupportedType(left.getClass());
+    }
+
+    protected boolean compare(LocalDate left, LocalDate right) {
+	throw unsupportedType(left.getClass());
+    }
 }
