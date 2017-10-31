@@ -9,7 +9,7 @@
 
 	<groupId>tech.lapsa.javax</groupId>
 	<artifactId>javax-validation-commons</artifactId>
-	<version>1.0</version>
+	<version>1.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>Jave EE Lib : Validation commons</name>
@@ -76,7 +76,7 @@
 	<scm>
 		<connection>scm:git:https://gitlab.lapsa.tech/lapsa/javax/validation-commons.git</connection>
 		<developerConnection>scm:git:https://gitlab.lapsa.tech/lapsa/javax/validation-commons.git</developerConnection>
-		<tag>v1.0</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<issueManagement>
