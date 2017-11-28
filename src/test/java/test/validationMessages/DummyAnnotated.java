@@ -11,8 +11,10 @@ import tech.lapsa.javax.validation.TemporalLeftBeforeRight;
 import tech.lapsa.javax.validation.TemporalPast;
 import tech.lapsa.javax.validation.ValidDateOfBirth;
 import tech.lapsa.javax.validation.ValidDateOfIssue;
+import tech.lapsa.javax.validation.ValidEmail;
 import tech.lapsa.javax.validation.ValidHumanName;
 import tech.lapsa.javax.validation.ValidURI;
+import tech.lapsa.javax.validation.ValidURL;
 
 public interface DummyAnnotated {
 
@@ -33,5 +35,7 @@ public interface DummyAnnotated {
     @ValidDateOfIssue
     @ValidHumanName
     @ValidURI
+    @ValidEmail
+    @ValidURL
     void dummy();
 }

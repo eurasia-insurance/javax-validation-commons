@@ -13,3 +13,5 @@ tech.lapsa.javax.validation.NotTooOldYearOfIssue.message = Максимальн�
 tech.lapsa.javax.validation.NotZeroAmount.message = Размер суммы должна быть больше ноля
 tech.lapsa.javax.validation.ValidHumanName.message = Некорректное значение. Возможно значение, которое Вы ввели содержит неразрешенные символы
 tech.lapsa.javax.validation.ValidURI.message = Неверный URI
+tech.lapsa.javax.validation.ValidEmail.message = Некорректный адрес e-mail
+tech.lapsa.javax.validation.ValidURL.message = Некорректный адрес сайта
