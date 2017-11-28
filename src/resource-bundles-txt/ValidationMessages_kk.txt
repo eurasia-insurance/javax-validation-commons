@@ -13,3 +13,5 @@ tech.lapsa.javax.validation.NotTooOldYearOfIssue.message = Ең көп рұқс�
 tech.lapsa.javax.validation.NotZeroAmount.message = Соманың мөлшері нөлден үлкен болуы тиіс
 tech.lapsa.javax.validation.ValidHumanName.message = Дұрыс емес мән. Сіз кіргізген мәнде рұқсат етілмеген символдар болуы мүмкін.
 tech.lapsa.javax.validation.ValidURI.message = =KAZ= Неверный URI
+tech.lapsa.javax.validation.ValidEmail.message = Қате  e-mail мекенжайы
+tech.lapsa.javax.validation.ValidURL.message = Қате сайт мекенжайы 

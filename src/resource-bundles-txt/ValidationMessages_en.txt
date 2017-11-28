@@ -13,3 +13,5 @@ tech.lapsa.javax.validation.NotTooOldYearOfIssue.message = The maximum permissib
 tech.lapsa.javax.validation.NotZeroAmount.message = Amount must be greater than zero
 tech.lapsa.javax.validation.ValidHumanName.message = Invalid value. Perhaps the value you have entered contains ilegal characters
 tech.lapsa.javax.validation.ValidURI.message = =ENG= Invalid URI
+tech.lapsa.javax.validation.ValidEmail.message = Incorrect e-mail address
+tech.lapsa.javax.validation.ValidURL.message = Incorrect website address
