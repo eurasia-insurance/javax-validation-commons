@@ -7,7 +7,7 @@ public final class LocalDateComparison implements TemporalComparison<LocalDate> 
     private final LocalDate left;
     private final LocalDate right;
 
-    public LocalDateComparison(LocalDate left, LocalDate right) {
+    public LocalDateComparison(final LocalDate left, final LocalDate right) {
 	this.left = left;
 	this.right = right;
     }

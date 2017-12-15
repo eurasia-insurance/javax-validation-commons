@@ -17,7 +17,7 @@ import tech.lapsa.javax.validation.constraints.TemporalFutureConstraintValidator
 public @interface TemporalFuture {
 
     boolean allowNow() default false;
-    
+
     String message() default "{tech.lapsa.javax.validation.TemporalFuture.message}";
 
     Class<?>[] groups() default {};

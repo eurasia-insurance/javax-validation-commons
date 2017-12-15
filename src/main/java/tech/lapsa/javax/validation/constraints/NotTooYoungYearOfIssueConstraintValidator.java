@@ -12,15 +12,17 @@ public class NotTooYoungYearOfIssueConstraintValidator
 
     private int minAge;
 
-    public void initialize(NotTooYoungYearOfIssue a) {
+    @Override
+    public void initialize(final NotTooYoungYearOfIssue a) {
 	minAge = a.minAge();
     }
 
-    public boolean isValid(Integer value, ConstraintValidatorContext cvc) {
+    @Override
+    public boolean isValid(final Integer value, final ConstraintValidatorContext cvc) {
 	if (value == null)
 	    return true;
-	int nowY = LocalDate.now().getYear();
-	int age = nowY - value;
+	final int nowY = LocalDate.now().getYear();
+	final int age = nowY - value;
 	return age >= minAge;
     }
 }

@@ -14,12 +14,12 @@ public class ValidURLConstraintValidator implements ConstraintValidator<ValidURL
     private Pattern pattern;
 
     @Override
-    public void initialize(ValidURL a) {
+    public void initialize(final ValidURL a) {
 	pattern = Pattern.compile(URL_PATTERN);
     }
 
     @Override
-    public boolean isValid(String value, ConstraintValidatorContext cvc) {
+    public boolean isValid(final String value, final ConstraintValidatorContext cvc) {
 	if (value == null)
 	    return true;
 	return pattern.matcher(value.toString()).matches();

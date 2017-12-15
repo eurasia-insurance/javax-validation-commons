@@ -11,32 +11,32 @@ public class TemporalLeftBeforeRightConstraintValidator
 	extends ATemporalLeftRightConstraintValidator<TemporalLeftBeforeRight> {
 
     @Override
-    public void initialize(TemporalLeftBeforeRight constraintAnnotation) {
+    public void initialize(final TemporalLeftBeforeRight constraintAnnotation) {
     }
 
     @Override
-    protected boolean compare(LocalDateTime left, LocalDateTime right) {
+    protected boolean compare(final LocalDateTime left, final LocalDateTime right) {
 	if (left == null || right == null)
 	    return true;
 	return left.isBefore(right);
     }
 
     @Override
-    protected boolean compare(LocalDate left, LocalDate right) {
+    protected boolean compare(final LocalDate left, final LocalDate right) {
 	if (left == null || right == null)
 	    return true;
 	return left.isBefore(right);
     }
 
     @Override
-    protected boolean compare(Instant left, Instant right) {
+    protected boolean compare(final Instant left, final Instant right) {
 	if (left == null || right == null)
 	    return true;
 	return left.isBefore(right);
     }
 
     @Override
-    protected boolean compare(Date left, Date right) {
+    protected boolean compare(final Date left, final Date right) {
 	if (left == null || right == null)
 	    return true;
 	return left.before(right);

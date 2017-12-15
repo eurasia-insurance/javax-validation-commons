@@ -20,7 +20,7 @@ public abstract class ATemporalLeftRightConstraintValidator<A extends Annotation
 	implements ConstraintValidator<A, TemporalComparison<?>> {
 
     @Override
-    public boolean isValid(TemporalComparison<?> value, ConstraintValidatorContext context) {
+    public boolean isValid(final TemporalComparison<?> value, final ConstraintValidatorContext context) {
 	if (value == null)
 	    return true;
 
@@ -39,39 +39,39 @@ public abstract class ATemporalLeftRightConstraintValidator<A extends Annotation
 	return true;
     }
 
-    private boolean compare(LocalDateTimeComparison value) {
+    private boolean compare(final LocalDateTimeComparison value) {
 	return compare(value.left(), value.right());
     }
 
-    private boolean compare(InstantComparison value) {
+    private boolean compare(final InstantComparison value) {
 	return compare(value.left(), value.right());
     }
 
-    private boolean compare(LocalDateComparison value) {
+    private boolean compare(final LocalDateComparison value) {
 	return compare(value.left(), value.right());
     }
 
-    private boolean compare(DateComparison value) {
+    private boolean compare(final DateComparison value) {
 	return compare(value.left(), value.right());
     }
 
-    protected static ValidationException unsupportedType(Class<?> clazz) {
+    protected static ValidationException unsupportedType(final Class<?> clazz) {
 	return new ValidationException(String.format("%1$s isn't supported for this constraint", clazz));
     }
 
-    protected boolean compare(Date left, Date right) {
+    protected boolean compare(final Date left, final Date right) {
 	throw unsupportedType(left.getClass());
     }
 
-    protected boolean compare(Instant left, Instant right) {
+    protected boolean compare(final Instant left, final Instant right) {
 	throw unsupportedType(left.getClass());
     }
 
-    protected boolean compare(LocalDateTime left, LocalDateTime right) {
+    protected boolean compare(final LocalDateTime left, final LocalDateTime right) {
 	throw unsupportedType(left.getClass());
     }
 
-    protected boolean compare(LocalDate left, LocalDate right) {
+    protected boolean compare(final LocalDate left, final LocalDate right) {
 	throw unsupportedType(left.getClass());
     }
 }

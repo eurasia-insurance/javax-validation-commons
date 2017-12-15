@@ -7,7 +7,7 @@ public final class InstantComparison implements TemporalComparison<Instant> {
     private final Instant left;
     private final Instant right;
 
-    public InstantComparison(Instant left, Instant right) {
+    public InstantComparison(final Instant left, final Instant right) {
 	this.left = left;
 	this.right = right;
     }

@@ -9,11 +9,13 @@ public class NotEmptyStringConstraintValidator implements ConstraintValidator<No
 
     private boolean trimSpaces;
 
-    public void initialize(NotEmptyString a) {
-	this.trimSpaces = a.trimSpaces();
+    @Override
+    public void initialize(final NotEmptyString a) {
+	trimSpaces = a.trimSpaces();
     }
 
-    public boolean isValid(String value, ConstraintValidatorContext cvc) {
+    @Override
+    public boolean isValid(final String value, final ConstraintValidatorContext cvc) {
 	if (value == null)
 	    return true;
 	if (trimSpaces)

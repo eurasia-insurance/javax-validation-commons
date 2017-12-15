@@ -17,7 +17,7 @@ public abstract class AValidEnumValueConstraintValidator<A extends Annotation, T
     protected abstract ValidationMode getMode();
 
     @Override
-    public boolean isValid(T value, ConstraintValidatorContext context) {
+    public boolean isValid(final T value, final ConstraintValidatorContext context) {
 	if (value == null)
 	    return true;
 
@@ -38,18 +38,18 @@ public abstract class AValidEnumValueConstraintValidator<A extends Annotation, T
 	switch (processWithMode) {
 	case DENY_IF_NOT_PERMITED:
 	    try {
-		for (T s : getPermited())
+		for (final T s : getPermited())
 		    if (s.equals(value))
 			return true;
-	    } catch (NullPointerException ignored) {
+	    } catch (final NullPointerException ignored) {
 	    }
 	    return false; // запрещено все, что не разрешено
 	case PERMIT_IF_NOT_DENIED:
 	    try {
-		for (T s : getDenied())
+		for (final T s : getDenied())
 		    if (s.equals(value))
 			return false;
-	    } catch (NullPointerException ignored) {
+	    } catch (final NullPointerException ignored) {
 	    }
 	    return true; // разрешено все, что не запрещено
 	default:

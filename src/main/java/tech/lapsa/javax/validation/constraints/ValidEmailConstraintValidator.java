@@ -15,12 +15,12 @@ public class ValidEmailConstraintValidator implements ConstraintValidator<ValidE
     private Pattern pattern;
 
     @Override
-    public void initialize(ValidEmail a) {
+    public void initialize(final ValidEmail a) {
 	pattern = Pattern.compile(EMAIL_PATTERN);
     }
 
     @Override
-    public boolean isValid(String value, ConstraintValidatorContext cvc) {
+    public boolean isValid(final String value, final ConstraintValidatorContext cvc) {
 	if (value == null)
 	    return true;
 	return pattern.matcher(value.toString()).matches();

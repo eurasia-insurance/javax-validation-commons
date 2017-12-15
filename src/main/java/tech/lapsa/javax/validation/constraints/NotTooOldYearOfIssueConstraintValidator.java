@@ -12,16 +12,18 @@ public class NotTooOldYearOfIssueConstraintValidator
 
     private int maxAge;
 
-    public void initialize(NotTooOldYearOfIssue a) {
+    @Override
+    public void initialize(final NotTooOldYearOfIssue a) {
 	maxAge = a.maxAge();
     }
 
-    public boolean isValid(Integer value, ConstraintValidatorContext cvc) {
+    @Override
+    public boolean isValid(final Integer value, final ConstraintValidatorContext cvc) {
 	if (value == null)
 	    return true;
-	
-	int nowY = LocalDate.now().getYear();
-	int age = nowY - value;
+
+	final int nowY = LocalDate.now().getYear();
+	final int age = nowY - value;
 	return age <= maxAge;
     }
 }

@@ -8,10 +8,12 @@ import tech.lapsa.javax.validation.NotZeroAmount;
 public class NotZeroAmountConstraintValidator
 	implements ConstraintValidator<NotZeroAmount, Number> {
 
-    public void initialize(NotZeroAmount a) {
+    @Override
+    public void initialize(final NotZeroAmount a) {
     }
 
-    public boolean isValid(Number value, ConstraintValidatorContext cvc) {
+    @Override
+    public boolean isValid(final Number value, final ConstraintValidatorContext cvc) {
 	if (value == null)
 	    return true;
 	if (value instanceof Double)

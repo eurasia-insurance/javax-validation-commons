@@ -7,7 +7,7 @@ public final class DateComparison implements TemporalComparison<Date> {
     private final Date left;
     private final Date right;
 
-    public DateComparison(Date left, Date right) {
+    public DateComparison(final Date left, final Date right) {
 	this.left = left;
 	this.right = right;
     }

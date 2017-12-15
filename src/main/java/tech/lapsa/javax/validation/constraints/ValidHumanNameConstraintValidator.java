@@ -18,7 +18,7 @@ public class ValidHumanNameConstraintValidator implements ConstraintValidator<Va
     private static final Map<String, Pattern> languagePatterns = new HashMap<>();
 
     static {
-	int flags = Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CHARACTER_CLASS | Pattern.UNICODE_CASE;
+	final int flags = Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CHARACTER_CLASS | Pattern.UNICODE_CASE;
 	languagePatterns.put("en", Pattern.compile(ENGLISH_PATTERN, flags));
 	languagePatterns.put("ru", Pattern.compile(RUSSIAN_PATTERN, flags));
 	languagePatterns.put("kk", Pattern.compile(KAZAKH_PATTERN, flags));
@@ -26,17 +26,19 @@ public class ValidHumanNameConstraintValidator implements ConstraintValidator<Va
 
     private String[] languagesAllowed;
 
-    public void initialize(ValidHumanName a) {
+    @Override
+    public void initialize(final ValidHumanName a) {
 	languagesAllowed = a.languagesAllowed();
     }
 
-    public boolean isValid(String value, ConstraintValidatorContext cvc) {
+    @Override
+    public boolean isValid(final String value, final ConstraintValidatorContext cvc) {
 	if (value == null)
 	    return true;
 	if (value.trim().isEmpty())
 	    return true;
-	for (String lang : languagesAllowed) {
-	    Pattern p = languagePatterns.get(lang);
+	for (final String lang : languagesAllowed) {
+	    final Pattern p = languagePatterns.get(lang);
 	    if (p != null && p.matcher(value.toString()).matches())
 		return true;
 	}

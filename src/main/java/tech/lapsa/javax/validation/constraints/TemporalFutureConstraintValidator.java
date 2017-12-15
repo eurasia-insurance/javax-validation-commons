@@ -13,37 +13,37 @@ public class TemporalFutureConstraintValidator extends ATemporalConstraintValida
     private boolean allowNow;
 
     @Override
-    public void initialize(TemporalFuture constraintAnnotation) {
-	this.allowNow = constraintAnnotation.allowNow();
+    public void initialize(final TemporalFuture constraintAnnotation) {
+	allowNow = constraintAnnotation.allowNow();
     }
 
     @Override
-    protected boolean validate(Date value) {
-	Date now = new Date();
-	return value.after(now) || (allowNow && value.equals(now));
+    protected boolean validate(final Date value) {
+	final Date now = new Date();
+	return value.after(now) || allowNow && value.equals(now);
     }
 
     @Override
-    protected boolean validate(LocalDateTime value) {
-	LocalDateTime now = LocalDateTime.now();
-	return value.isAfter(now) || (allowNow && value.isEqual(now));
+    protected boolean validate(final LocalDateTime value) {
+	final LocalDateTime now = LocalDateTime.now();
+	return value.isAfter(now) || allowNow && value.isEqual(now);
     }
 
     @Override
-    protected boolean validate(LocalDate value) {
-	LocalDate now = LocalDate.now();
-	return value.isAfter(now) || (allowNow && value.isEqual(now));
+    protected boolean validate(final LocalDate value) {
+	final LocalDate now = LocalDate.now();
+	return value.isAfter(now) || allowNow && value.isEqual(now);
     }
 
     @Override
-    protected boolean validate(LocalTime value) {
-	LocalTime now = LocalTime.now();
-	return value.isAfter(now) || (allowNow && value.equals(now));
+    protected boolean validate(final LocalTime value) {
+	final LocalTime now = LocalTime.now();
+	return value.isAfter(now) || allowNow && value.equals(now);
     }
 
     @Override
-    protected boolean validate(Instant value) {
-	Instant now = Instant.now();
-	return value.isAfter(now) || (allowNow && value.equals(now));
+    protected boolean validate(final Instant value) {
+	final Instant now = Instant.now();
+	return value.isAfter(now) || allowNow && value.equals(now);
     }
 }

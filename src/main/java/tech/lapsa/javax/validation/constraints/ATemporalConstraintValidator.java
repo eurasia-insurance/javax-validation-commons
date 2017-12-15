@@ -14,11 +14,11 @@ import javax.validation.ValidationException;
 public abstract class ATemporalConstraintValidator<A extends Annotation> implements ConstraintValidator<A, Object> {
 
     @Override
-    public void initialize(A a) {
+    public void initialize(final A a) {
     }
 
     @Override
-    public boolean isValid(Object value, ConstraintValidatorContext context) {
+    public boolean isValid(final Object value, final ConstraintValidatorContext context) {
 	if (value == null)
 	    return true;
 	if (value instanceof Date)
@@ -34,27 +34,27 @@ public abstract class ATemporalConstraintValidator<A extends Annotation> impleme
 	throw unsupportedType(value.getClass());
     }
 
-    protected static ValidationException unsupportedType(Class<?> clazz) {
+    protected static ValidationException unsupportedType(final Class<?> clazz) {
 	return new ValidationException(String.format("%1$s isn't supported for this constraint", clazz));
     }
 
-    protected boolean validate(Date value) {
+    protected boolean validate(final Date value) {
 	throw unsupportedType(value.getClass());
     }
 
-    protected boolean validate(Instant value) {
+    protected boolean validate(final Instant value) {
 	throw unsupportedType(value.getClass());
     }
 
-    protected boolean validate(LocalDateTime value) {
+    protected boolean validate(final LocalDateTime value) {
 	throw unsupportedType(value.getClass());
     }
 
-    protected boolean validate(LocalDate value) {
+    protected boolean validate(final LocalDate value) {
 	throw unsupportedType(value.getClass());
     }
 
-    protected boolean validate(LocalTime value) {
+    protected boolean validate(final LocalTime value) {
 	throw unsupportedType(value.getClass());
     }
 

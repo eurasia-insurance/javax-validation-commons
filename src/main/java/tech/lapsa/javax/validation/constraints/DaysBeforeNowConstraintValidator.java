@@ -15,13 +15,13 @@ public class DaysBeforeNowConstraintValidator extends ATemporalConstraintValidat
     private long days;
 
     @Override
-    public void initialize(DaysBeforeNow constraintAnnotation) {
-	this.mode = constraintAnnotation.mode();
-	this.days = constraintAnnotation.value();
+    public void initialize(final DaysBeforeNow constraintAnnotation) {
+	mode = constraintAnnotation.mode();
+	days = constraintAnnotation.value();
     }
 
     @Override
-    protected boolean validate(Date value) {
+    protected boolean validate(final Date value) {
 	switch (mode) {
 	case MUST_NOT:
 	    return value.toInstant().isBefore(Instant.now().plus(days, ChronoUnit.DAYS));
@@ -32,7 +32,7 @@ public class DaysBeforeNowConstraintValidator extends ATemporalConstraintValidat
     }
 
     @Override
-    protected boolean validate(LocalDateTime value) {
+    protected boolean validate(final LocalDateTime value) {
 	switch (mode) {
 	case MUST_NOT:
 	    return value.isBefore(LocalDateTime.now().plusDays(days));
@@ -43,7 +43,7 @@ public class DaysBeforeNowConstraintValidator extends ATemporalConstraintValidat
     }
 
     @Override
-    protected boolean validate(Instant value) {
+    protected boolean validate(final Instant value) {
 	switch (mode) {
 	case MUST_NOT:
 	    return value.isBefore(Instant.now().plus(days, ChronoUnit.DAYS));
@@ -54,7 +54,7 @@ public class DaysBeforeNowConstraintValidator extends ATemporalConstraintValidat
     }
 
     @Override
-    protected boolean validate(LocalDate value) {
+    protected boolean validate(final LocalDate value) {
 	switch (mode) {
 	case MUST_NOT:
 	    return value.isBefore(LocalDate.now().plusDays(days));

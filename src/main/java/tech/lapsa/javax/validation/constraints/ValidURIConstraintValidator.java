@@ -14,13 +14,13 @@ public class ValidURIConstraintValidator implements ConstraintValidator<ValidURI
     private String[] allowedSchemes;
 
     @Override
-    public void initialize(ValidURI constraintAnnotation) {
+    public void initialize(final ValidURI constraintAnnotation) {
 	mustAbsolute = constraintAnnotation.mustAbsolute();
 	allowedSchemes = constraintAnnotation.allowedSchemes();
     }
 
     @Override
-    public boolean isValid(URI value, ConstraintValidatorContext context) {
+    public boolean isValid(final URI value, final ConstraintValidatorContext context) {
 	if (value == null)
 	    return true;
 	if (mustAbsolute && !value.isAbsolute())
